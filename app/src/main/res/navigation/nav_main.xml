@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/screen_splash">
+
+    <fragment
+        android:id="@+id/screen_splash"
+        android:name="com.example.bcpdemo.ui.fragment.splash.SplashFragment"
+        android:label="SplashFragment"
+        tools:layout="@layout/fragment_splash" >
+        <action
+            android:id="@+id/action_screen_splash_to_currency_exchange"
+            app:destination="@id/currency_exchange" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/currency_exchange"
+        android:name="com.example.bcpdemo.ui.fragment.currency_exchange.CurrencyExchangeFragment"
+        android:label="CurrencyExchangeFragment"
+        tools:layout="@layout/fragment_currency_exchange">
+        <action
+            android:id="@+id/action_currency_exchange_to_coins"
+            app:destination="@id/coins" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coins"
+        android:name="com.example.bcpdemo.ui.fragment.coins.CoinsFragments"
+        tools:label="CoinsFragment"
+        tools:layout="@layout/fragment_coin"/>
+
+</navigation>
